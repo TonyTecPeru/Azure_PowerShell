@@ -1,0 +1,23 @@
+----Version de PowerShell
+$PSVersionTable.PSVersion
+
+---Politica de Ejecucion
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+--Module Azure
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force -AllowClobber
+
+--Conectar cuenta de Azure
+Connect-AzAccount
+
+--Listado de Recursos
+Get-AzResourceGroup
+
+--Listado de Recursos - Autosize
+Get-AzResourceGroup | Format-Table -AutoSize
+
+--Crear Grupo de Recursos
+New-AzResourceGroup -Name "<Nombre>" -Location "<Region>"
+
+--Eliminar Grupo de Recursos
+Remove-AzResourceGroup -Name <Nombre>
