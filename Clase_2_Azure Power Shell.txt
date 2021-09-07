@@ -1,0 +1,15 @@
+--Buscar Localizaciones Disponibles
+Get-AzLocation
+
+--Crear Storage Account
+New-AzStorageAccount -ResourceGroupName "<Nombre>" -Name "<Nombre>" -Location "<Nombre>" -SkuName "<Nombre>" -EnableHierarchicalNamespace $true -Kind StorageV2 -AccessTier Hot
+
+--Listar Storage Account
+Get-AzStorageAccount
+
+--Borrar Storage Account
+Remove-AzStorageAccount -ResourceGroup "<Nombre>" -StorageAccountName "<Nombre>"
+
+--Cambiar Tipo de Replicacion
+Set-AzStorageAccount -ResourceGroupName "<Nombre>" -Name "<Nombre>" -SkuName "<Nombre>" 
+
